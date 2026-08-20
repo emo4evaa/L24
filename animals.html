@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Awesome Zoo</title>
+        <style>
+            body{
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                background: rgb(141, 69, 174);
+                padding: 30px;
+            }
+            h1{
+                color: rgb(128, 195, 223);
+            }
+            #zoo{
+                border: 2px solid #90d3ff;
+                width: 300px;
+                margin: 16px auto;
+                border-radius: 10px;
+                background: rgb(228, 181, 255);
+            }
+            .zone{
+                border: 1px solid rgb(55, 112, 153);
+                color: rgb(105, 23, 153);
+                padding: 10px 24px;
+                border: none;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+            button {
+                background: #5eb0c3;
+                color: white;
+                padding: 10px 24px;
+                border: none;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+         <center>
+        <h1>My Awesome Zoo!</h1>
+        <p>Use JavaScript and the DOM to add animals to each cage!!</p>
+
+    <div id="zoo">
+    <div class="zone">Zone 1: <span id="zone1"></span></div>
+    <div class="zone">Zone 2: <span id="zone2"></span></div>
+    <div class="zone">Zone 3: <span id="zone3"></span></div>
+    <div class="zone">Total Animals: <span id="total"></span></div>
+  </div>
+        <br>
+      <button onclick="openZoo()">Open the Zoo!</button>
+        <p id="zoo-status"></p>
+</center>
+        <script>
+            function openZoo(){
+                document.getElementById("zone1").innerHTML = "Wolf;"
+                document.getElementById("zone2").innerHTML = "Lion;"
+                document.getElementById("zone3").innerHTML = "Tiger;"
+                
+                document.getElementById("total").innerHTML = "3";
+                document.getElementById("zoo").style.backgroundColor = "yellow";
+                document.getElementById("zoo-status").innerHTML = document.title + " is now open!";
+            }
+        </script>
+    </body>
+</html>
